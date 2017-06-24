@@ -1,6 +1,10 @@
 <?php
 
 /**
+ * functions.php for the 2017-child-theme-example
+*/
+
+/**
  * Add a section in the customizer to allow the user to change a setting to
  * only show excerpts on archive pages.
  */
@@ -39,7 +43,6 @@ function ptron_footer_widgets_init() {
 	) );
 }
 
-
 /**
   * Here we add a new function to the wp_enqueue_scripts hook
   * to enqueue the parent stylesheet and then enqueue the
@@ -48,7 +51,7 @@ function ptron_footer_widgets_init() {
 add_action( 'wp_enqueue_scripts', 'ptron_theme_enqueue_styles' );
 function ptron_theme_enqueue_styles() {
 
-    $parent_style = 'parent-style'; // This is 'twentyfifteen-style' for the Twenty Fifteen theme.
+    $parent_style = 'parent-style';
 
     wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'child-style',
