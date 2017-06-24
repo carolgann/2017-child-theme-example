@@ -13,3 +13,6 @@ This first thing you will need to create is a style.css file. This file alone te
 
 ### Getting Functional
 A style.css may technically be the only required file for a child them, but to load that style.css file it is best practice to engqueu it so it is available to the theme in WordPress. To do that, you need a functions.php file.
+
+### Copy Cat
+This is where the power of the child/parent theme relationship really comes into it's own. We will copy some of the files we want to override from the twentyfifteen them to our child theme and then modify as needed. Some of these files include the footer files footer-widgets.php and site-info.php.

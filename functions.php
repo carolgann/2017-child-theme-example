@@ -1,6 +1,31 @@
 <?php
 
 /**
+ * Add a section in the customizer to allow the user to change a setting to
+ * only show excerpts on archive pages.
+ */
+add_action( 'customize_register', 'ptron_customize_register' );
+function ptron_customize_register( WP_Customize_Manager $wp_customize ) {
+	$wp_customize->add_section( 'section_archives', array(
+		'title' => __( 'Archives', 'twenty-seventeen-child-example' ),
+	) );
+	$wp_customize->add_setting( 'show_excerpts_in_archives', array(
+		'type'      => 'theme_mod',
+		'transport' => 'refresh',
+	) );
+	$wp_customize->add_control( new WP_Customize_Control(
+		$wp_customize,
+		'show_excerpts_in_archives_control',
+		array(
+			'label'    => __( 'Only show excerpts on archive pages', 'twenty-seventeen-child-example' ),
+			'section'  => 'section_archives',
+			'settings' => 'show_excerpts_in_archives',
+			'type'     => 'checkbox',
+		)
+	) );
+}
+
+/**
   * Here we are adding 1 additional widget section in the footer
   */
 add_action( 'widgets_init', 'ptron_footer_widgets_init' );
