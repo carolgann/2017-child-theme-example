@@ -18,3 +18,22 @@
 h1.site-title {
   font-size: 3em;
 }
+
+/* Footer */
+
+.site-footer .widget-column.footer-widget-1 {
+  float: left;
+  width: 31%;
+}
+
+.site-footer .widget-column.footer-widget-2 {
+  padding-left: 50px;
+  float: left;
+  width: 31%;
+}
+
+.site-footer .widget-column.footer-widget-3 {
+  padding-left: 50px;
+  float: left;
+  width: 31%;
+}
